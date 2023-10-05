@@ -1,0 +1,22 @@
+{
+  "datum": "2023-10-03T15:52:36.102Z",
+  "namn": "Erik",
+  "point": [
+    {
+      "animal": "cat",
+      "point": null
+    },
+    {
+      "animal": "dog",
+      "point": null
+    },
+    {
+      "animal": "rabbit",
+      "point": null
+    },
+    {
+      "animal": "fish",
+      "point": null
+    }
+  ]
+}

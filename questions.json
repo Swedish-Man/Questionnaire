@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Gillar du att vara aktiv utomhus?0",
+    "ja": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "nej": [
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "question": "Gillar du att vara aktiv utomhus?1",
+    "ja": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "nej": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "question": "Gillar du att vara aktiv utomhus?2",
+    "ja": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "nej": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "question": "Gillar du att vara aktiv utomhus?3",
+    "ja": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "nej": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "question": "Gillar du att vara aktiv utomhus?4",
+    "ja": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "nej": [
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "question": "Gillar du att vara aktiv utomhus?5",
+    "ja": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "nej": [
+      10,
+      10,
+      10,
+      10
+    ]
+  }
+]
