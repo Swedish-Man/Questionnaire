@@ -2,91 +2,226 @@
   {
     "question": "Gillar du att vara aktiv utomhus?0",
     "ja": [
-      1,
       2,
-      3,
+      4,
+      1,
+      0
+    ],
+    "nej": [
+      2,
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "question": "Gillar du leka med ditt husdjur?1",
+    "ja": [
+      2,
+      4,
+      1,
+      0
+    ],
+    "nej": [
+      1,
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "question": "Är du allergisk mot pälsdjur?2",
+    "ja": [
+      0,
+      0,
+      1,
       4
     ],
     "nej": [
-      10,
-      11,
-      12,
-      13
+      4,
+      4,
+      2,
+      2
     ]
   },
   {
-    "question": "Gillar du att vara aktiv utomhus?1",
+    "question": "Vill du motionera med ditt husdjur?3",
     "ja": [
       1,
+      4,
       1,
+      0
+    ],
+    "nej": [
+      2,
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "question": "Gillar du att gå promenader?4",
+    "ja": [
+      1,
+      4,
+      1,
+      0
+    ],
+    "nej": [
+      2,
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "question": "Trivs du inomhus?5",
+    "ja": [
+      2,
+      1,
+      4,
+      4
+    ],
+    "nej": [
+      2,
+      4,
+      1,
+      0
+    ]
+  },
+  {
+    "question": "Vill du gosa med ditt husdjur?6",
+    "ja": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "nej": [
+      1,
+      1,
+      1,
+      4
+    ]
+  },
+  {
+    "question": "Är du okej med att städa ditt hus mer ofta?7",
+    "ja": [
+      4,
+      4,
+      2,
+      1
+    ],
+    "nej": [
+      0,
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "question": "Är du en utemänniska?8",
+    "ja": [
+      1,
+      4,
+      1,
+      0
+    ],
+    "nej": [
+      4,
+      1,
+      4,
+      0
+    ]
+  },
+  {
+    "question": "Har du mycket tid att dedikera till ditt husdjur?9",
+    "ja": [
+      2,
+      4,
       1,
       1
     ],
     "nej": [
-      10,
-      10,
-      10,
-      10
+      1,
+      1,
+      2,
+      4
     ]
   },
   {
-    "question": "Gillar du att vara aktiv utomhus?2",
+    "question": "Är du lätt att väcka på natten?10",
     "ja": [
       1,
-      1,
-      1,
-      1
+      0,
+      4,
+      4
     ],
     "nej": [
-      10,
-      10,
-      10,
-      10
+      4,
+      4,
+      4,
+      4
     ]
   },
   {
-    "question": "Gillar du att vara aktiv utomhus?3",
+    "question": "Har du ömtålig dekoration i din bostad?11",
     "ja": [
+      0,
       1,
-      1,
-      1,
-      1
+      2,
+      4
     ],
     "nej": [
-      10,
-      10,
-      10,
-      10
+      4,
+      4,
+      2,
+      4
     ]
   },
   {
-    "question": "Gillar du att vara aktiv utomhus?4",
+    "question": "Vill du tävla med ditt djur?12",
     "ja": [
-      1,
-      1,
-      1,
-      1
+      4,
+      4,
+      0,
+      0
     ],
     "nej": [
-      10,
-      10,
-      10,
-      10
+      4,
+      4,
+      4,
+      4
     ]
   },
   {
-    "question": "Gillar du att vara aktiv utomhus?5",
+    "question": "Gillar du löprundor?13",
     "ja": [
-      1,
-      1,
-      1,
-      1
+      0,
+      4,
+      0,
+      0
     ],
     "nej": [
-      10,
-      10,
-      10,
-      10
+      4,
+      0,
+      4,
+      4
+    ]
+  },
+  {
+    "question": "Vill du ställa ut ditt djur på tävlingar?14",
+    "ja": [
+      4,
+      4,
+      0,
+      0
+    ],
+    "nej": [
+      0,
+      0,
+      4,
+      4
     ]
   }
 ]

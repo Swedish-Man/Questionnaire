@@ -9,19 +9,15 @@ const data = require('./questions.json')
 // fs ger oss möjligheten att skriva till filer
 const fs = require('fs')
 
-/*
-//
-*/
 let points = [0, 0, 0, 0];
 let asd = 0;
 const date = new Date();
 console.log(date);
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 15; i++) {
   console.log(data[i].question);
 
-  let jaNejSvar = prompt("svar: ");
+  let jaNejSvar = prompt("svar: ").trim().toLocaleLowerCase();
   if (jaNejSvar == 'ja') {
-    //points[0] = points[0] + data[i].ja[0]
     points[0] += data[i].ja[0];
     points[1] += data[i].ja[1];
     points[2] += data[i].ja[2];
@@ -32,6 +28,8 @@ for (let i = 0; i < 3; i++) {
     points[1] += data[i].nej[1];
     points[2] += data[i].nej[2];
     points[3] += data[i].nej[3];
+  } else {
+    console.log("Valet finns inte. Därför hoppas frågan över!")
   }
   console.log(points);
 }
@@ -39,10 +37,10 @@ let namn = prompt("Vad heter du?: ");
 
 let totalPoints = points[0] + points[1] + points[2] + points[3]
 
-let catPoints = points[0] / totalPoints * 100; //25
-let dogPoints = points[1] / totalPoints * 100; //25
-let rabbitPoints = points[2] / totalPoints * 100; //25
-let fishPoints = points[3] / totalPoints * 100; //25
+let catPoints = points[0] / totalPoints * 100;
+let dogPoints = points[1] / totalPoints * 100;
+let rabbitPoints = points[2] / totalPoints * 100;
+let fishPoints = points[3] / totalPoints * 100;
 
 let procentResultat = [
   { animal: 'cat', point: catPoints },
@@ -66,6 +64,3 @@ fs.writeFile('./spara-till.json', JSON.stringify(resultat, null, 2), (err) => {
   if (err) throw err;
   console.log('Data written to file');
 });
-
-
-
