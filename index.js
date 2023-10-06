@@ -1,18 +1,24 @@
-const prompt = require('prompt-sync')({ sigint: true })
+const prompt = require('prompt-sync')({ sigint: true });
+const fs = require('fs');
+const data = require('./questions.json');
+const { v4: uuidv4 } = require('uuid');
 
-const PromptSync = require('prompt-sync');
-// Hämtar in JSON-fil och spara den i vår data-variabel
-const data = require('./questions.json')
-//const data2 = require('./spara-till.json')
+let allResults = [];
 
-
-// fs ger oss möjligheten att skriva till filer
-const fs = require('fs')
+try {
+  const rawData = fs.readFileSync('./spara-till.json', 'utf8');
+  if (rawData.trim() !== '') {
+    allResults = JSON.parse(rawData);
+  }
+} catch (error) {
+  console.error("Error loading previous results:", error);
+}
 
 let points = [0, 0, 0, 0];
 let asd = 0;
 const date = new Date();
 console.log(date);
+
 for (let i = 0; i < 15; i++) {
   console.log(data[i].question);
 
@@ -29,38 +35,52 @@ for (let i = 0; i < 15; i++) {
     points[2] += data[i].nej[2];
     points[3] += data[i].nej[3];
   } else {
-    console.log("Valet finns inte. Därför hoppas frågan över!")
+    console.log("valet finns inte! därför hoppas frågan över");
   }
   console.log(points);
 }
-let namn = prompt("Vad heter du?: ");
 
-let totalPoints = points[0] + points[1] + points[2] + points[3]
+let userName = prompt("Vad heter du?: ");
 
-let catPoints = points[0] / totalPoints * 100;
-let dogPoints = points[1] / totalPoints * 100;
-let rabbitPoints = points[2] / totalPoints * 100;
-let fishPoints = points[3] / totalPoints * 100;
+const userId = generateUniqueUserId();
+
+let totalPoints = points[0] + points[1] + points[2] + points[3];
+let catPoints = (points[0] / totalPoints) * 100;
+let dogPoints = (points[1] / totalPoints) * 100;
+let rabbitPoints = (points[2] / totalPoints) * 100;
+let fishPoints = (points[3] / totalPoints) * 100;
 
 let procentResultat = [
-  { animal: 'cat', point: catPoints },
-  { animal: 'dog', point: dogPoints },
-  { animal: 'rabbit', point: rabbitPoints },
-  { animal: 'fish', point: fishPoints }
+  { animal: 'cat', percent: catPoints },
+  { animal: 'dog', percent: dogPoints },
+  { animal: 'rabbit', percent: rabbitPoints },
+  { animal: 'fish', percent: fishPoints },
 ];
 
-procentResultat.sort((a, b) => b.point - a.point);
-
-console.log(procentResultat);
+procentResultat.sort((a, b) => b.percent - a.percent);
 
 const resultat = {
   datum: date,
-  namn: namn,
-  point: procentResultat
-}
+  userId: userId,
+  namn: userName,
+  score: procentResultat,
+};
+
 console.log(resultat);
 
-fs.writeFile('./spara-till.json', JSON.stringify(resultat, null, 2), (err) => {
-  if (err) throw err;
-  console.log('Data written to file');
-});
+const existingResult = allResults.find((result) => result.userId === userId);
+
+if (existingResult) {
+  existingResult.scores = percent;
+  existingResult.date = new Date().toLocaleString();
+} else {
+  allResults.push(resultat);
+}
+
+fs.writeFileSync('./spara-till.json', JSON.stringify(allResults, null, 2));
+
+console.log("Dina resultat har sparats!");
+
+function generateUniqueUserId() {
+  return uuidv4();
+}
