@@ -71,7 +71,7 @@ console.log(resultat);
 const existingResult = allResults.find((result) => result.userId === userId);
 
 if (existingResult) {
-  existingResult.scores = percent;
+  existingResult.scores = procentResultat;
   existingResult.date = new Date().toLocaleString();
 } else {
   allResults.push(resultat);
